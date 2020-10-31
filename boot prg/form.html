@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form validation</title>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <link rel='stylesheet' href='style.css' type='text/css' /> 
+  <script type="text/javascript" src="form.js"></script>
+  
+</head>
+<body>
+  <div class="container">
+    <h2>Collage Application Form</h2>
+
+<form id="myform" onSubmit="return validate()">
+
+ <label for="fname"><b>First name:</b></label>
+  <input type="text" id="fname" name="fname" placeholder=" Enter first name" ></input><br><br>
+  
+
+<label for="lname"><b>Last name:</b></label>
+  <input type="text" id="lname" name="lname" placeholder=" Enter last name"></input><br><br>
+
+  <label for="gender"><b>Gender:</b></label>
+  
+<input type="radio" id="male" name="gender" value="male"></input>
+  <label for="male">Male</label>
+ 
+<input type="radio" id="female" name="gender" value="female"></input>
+  <label for="female">Female</label>
+ 
+ <input type="radio" id="other" name="gender" value="other"></input>
+  <label for="other">Other</label><br><br>
+
+  <label for="course name"><b>Course:</b></label>
+  Enginnering <input type="radio" name="answer"  value="eng"/> 
+Medical<input type="radio" name="answer" value="medical"/> 
+Bsc <input type="radio" name="answer" value="bsc"/><br><br>
+
+<div id="engfield" style="display:none;">
+  <label for="course name"><b>Fields:</b></label>
+CE<input  type="radio" name="CE" id="otherAnswer1"/>
+ME<input  type="radio" name="ME" id="otherAnswer2"/>
+EE<input  type="radio" name="EE" id="otherAnswer3"/>
+IT<input  type="radio" name="IT" id="otherAnswer4"/>
+</div>
+<div id="medicalfield" style="display:none;">
+  <label for="course name"><b>Fields:</b></label>
+Gynacologist<input  type="radio" name="CE" id="otherAnswer1"/>
+Medicine<input  type="radio" name="ME" id="otherAnswer2"/>
+Dentistry<input  type="radio" name="EE" id="otherAnswer3"/>
+Pediatrician<input  type="radio" name="IT" id="otherAnswer4"/>
+</div>
+<div id="bscfield" style="display:none;">
+  <label for="course name"><b>Fields:</b></label>
+Computer<input  type="radio" name="computer" id="otherAnswer5"/>
+Math<input  type="radio" name="math" id="otherAnswer6"/>
+Physics<input  type="radio" name="physics" id="otherAnswer7"/>
+Chemistry<input  type="radio" name="chemistry" id="otherAnswer7"/>
+ </div>
+
+  <div>
+  <p><b>Upload photo:</b></p> 
+<p>Click on the "Choose File" button to upload a file:</p>
+  <input type="file" id="myFile" name="file_upload1" class="file_upload1"><br><br>
+  
+</div>
+
+
+  <label for="mobnum"><b>Mobile number:</b></label>
+  <input type="number" id="mobnum" name="mobnum" placeholder="Enter mobile number" ></input><br><br>
+
+
+
+  <label for="email"><b>Email ID:</b></label>
+  <input type="email" id="email" name="email" placeholder=" Enter emailid" ></input><br>
+
+
+  <label for="addre"><b>Address:</b></label><br>
+  <input type="text"  name="addre"  id="autocomplete"  placeholder="Street"><br>
+  <input type="text"    name="addre"   id="inputCity"   placeholder="City"><br>
+  <input type="text"  name="addre"   id="inputState"   placeholder="State"><br> 
+  <input type="text"   name="addre"  id="inputCounty"  placeholder="County"><br><br>
+
+<input type="submit" value="submit" name="submit" id="submit">
+</form>
+</div>
+</body>
+</html>
